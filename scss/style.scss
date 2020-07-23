@@ -1,0 +1,430 @@
+// ---------------------------------------------------------- mixins ------------------------
+@mixin Ubuntu_font {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+@mixin Playfair_font {
+    font-family: 'Playfair Display', serif;
+}
+
+// ========================================================== / mixins ======================
+// ---------------------------------------------------------- variables =====================
+// font
+// color
+// ========================================================== / variables ===================
+// ---------------------------------------------------------- commons -----------------------
+.container {
+    width: 1200px;
+}
+
+.main_btn {
+    display: inline-block;
+    position: relative;
+    padding: 11px 60px 11px 24px;
+    background: #E52D27 url(../assets/svg/carbon_arrow-right.svg) no-repeat 92% 50%;
+    @include Ubuntu_font();
+    font-size: 18px;
+    min-width: 221px;
+    line-height: 26px;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 46px;
+    top: -7px;
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 7px;
+        left: 10px;
+        border: 3px solid #E52D27;
+    }
+    &:hover {
+        text-decoration: none;
+        color: #fff;
+    }
+}
+
+.section_title {
+    @include Playfair_font();
+    font-style: normal;
+    font-weight: bold;
+    font-size: 45px;
+    line-height: 64px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.section_description {
+    @include Ubuntu_font();
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+// ========================================================== / commons =====================
+// ---------------------------------------------------------- section_intro -----------------
+.section_intro {
+    background: url(../assets/banner.jpg) no-repeat 0 100%;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 0;
+    header {
+        padding-top: 32px;
+        .menu {
+            margin: 0;
+            list-style: none;
+        }
+        .item_link {
+            text-decoration: none;
+            color: #fff;
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 26px;
+        }
+    }
+    .intro_content {
+        margin-top: 25vh;
+        .intro_title {
+            @include Playfair_font();
+            font-weight: bold;
+            font-size: 45px;
+            line-height: 64px;
+            color: #E52D27;
+        }
+        .intro_subtitle {
+            @include Ubuntu_font();
+            font-size: 20px;
+            line-height: 28px;
+            color: rgba(255, 255, 255, 0.9);
+            margin-top: 22px;
+        }
+        .banner_front_photo {
+            width: 222px;
+            height: 197px;
+            border: 6px solid #FFFFFF;
+            background: url(../assets/banner_front_photo.jpg) no-repeat 0 0;
+            background-size: cover;
+        }
+        .scroll_arrow_img {
+            @include Ubuntu_font();
+            position: relative;
+            top: -100px;
+            left: 70px;
+            font-weight: 300;
+            font-size: 20px;
+            line-height: 20px;
+            color: #FFFFFF;
+            transform: rotate(90deg);
+        }
+    }
+}
+
+// ========================================================== / section_intro ===============
+// ---------------------------------------------------------- section_preview ---------------
+.section_preview {
+    background: rgba(179, 18, 23, 0.8);
+    padding-top: 81px;
+    padding-bottom: 81px;
+    .section_title {
+        margin-bottom: 20px;
+    }
+}
+
+// ========================================================== / section_preview =============
+// ---------------------------------------------------------- section_advantages ------------
+.section_advantages {
+    background: #121212;
+    padding-bottom: 100px;
+    padding-top: 85px;
+    padding-bottom: 100px;
+    .section_title {
+        margin-bottom: 79px;
+    }
+    .advantages_item {
+        @include Ubuntu_font();
+        color: #FFFFFF;
+        &__icon {
+            height: 54px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+        }
+        &__title {
+            font-weight: 500;
+            font-size: 22px;
+            margin-bottom: 17px;
+            line-height: 30px;
+        }
+        &__description {
+            font-size: 18px;
+            line-height: 30px;
+        }
+    }
+}
+
+// ========================================================== / section_advantages ==========
+// ---------------------------------------------------------- section_contacts --------------
+.section_contacts {
+    background: #820D11;
+    padding: 50px 0 57px;
+    .section_title {
+        text-align: start;
+        font-weight: 900;
+        line-height: 45px;
+        color: #EED0AC;
+    }
+    .contacts_text {
+        @include Ubuntu_font();
+        font-size: 18px;
+        line-height: 27px;
+        color: #EED0AC;
+        padding: 0 15px;
+    }
+    .phone_list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        height: 70px;
+        li {
+            margin-bottom: 5px;
+        }
+    }
+    .contacts_block {
+        margin-top: 10px;
+    }
+}
+
+// ========================================================== / section_contacts ============
+// ---------------------------------------------------------- section_promo -----------------
+.section_promo {
+    padding: 100px 0;
+    .promo_photo_wrap {
+        text-align: center;
+        position: relative;
+        img {
+            position: relative;
+            left: 20px;
+            z-index: 50;
+        }
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 75px;
+            left: 0;
+            width: 153px;
+            height: 153px;
+            background: #750C0F;
+            border-radius: 50%;
+            z-index: 49;
+        }
+    }
+    .promo_text_wrap {
+        .section_title {
+            text-align: start;
+            color: #B31217;
+            margin-bottom: 21px;
+        }
+        .section_description {
+            text-align: start;
+            color: #1D1D1D;
+            margin-bottom: 54px;
+        }
+        .promo_text_title {
+            color: #B31217;
+            @include Ubuntu_font();
+            font-weight: 500;
+            font-size: 20px;
+            line-height: 30px;
+        }
+        .promo_text_list {
+            padding-left: 20px;
+            li {
+                color: #B31217;
+                margin-bottom: 5px;
+            }
+            span {
+                color: #1D1D1D;
+                @include Ubuntu_font();
+                font-size: 20px;
+                line-height: 30px;
+            }
+        }
+    }
+}
+
+// ========================================================== / section_promo ===============
+// ---------------------------------------------------------- section_requirements ----------
+.section_requirements {
+    padding: 80px 0;
+    background: url(../assets/requirements.jpg) no-repeat 0 0;
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    &::after {
+        content: "";
+        position: absolute;
+        top: 15vh;
+        right: -54px;
+        border-radius: 50%;
+        width: 154px;
+        height: 154px;
+        background: rgba(117, 12, 15, 0.35);
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 3vh;
+        left: 42vh;
+        border-radius: 50%;
+        width: 300px;
+        height: 300px;
+        background: rgba(33, 33, 33, 0.62);
+    }
+    .section_title {
+        @include Playfair_font();
+        font-size: 45px;
+        line-height: 56px;
+        text-align: start;
+        position: relative;
+        z-index: 50;
+    }
+    .requirements_item__description {
+        position: relative;
+        font-size: 20px;
+        line-height: 30px;
+        color: rgba(255, 255, 255, 0.9);
+        z-index: 50;
+    }
+    .requirements_item {
+        @include Ubuntu_font();
+        font-weight: bold;
+        color: #FFFFFF;
+        position: relative;
+    }
+    .item1 {
+        &::before {
+            content: "1";
+            font-size: 45px;
+            position: absolute;
+            top: -70px;
+            z-index: 50;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -90px;
+            left: -42px;
+            border-radius: 50%;
+            width: 110px;
+            height: 110px;
+            background: rgba(33, 33, 33, 0.62);
+        }
+    }
+    .item2 {
+        &::before {
+            content: "2";
+            font-size: 83px;
+            position: absolute;
+            top: -112px;
+            z-index: 50;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -74px;
+            left: -40px;
+            border-radius: 50%;
+            width: 154px;
+            height: 154px;
+            background: rgba(97, 15, 17, 0.38);
+        }
+    }
+    .item3 {
+        &::before {
+            content: "3";
+            font-size: 63px;
+            position: absolute;
+            top: -91px;
+            z-index: 50;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -90px;
+            left: -38px;
+            border-radius: 50%;
+            width: 222px;
+            height: 222px;
+            background: rgba(33, 33, 33, 0.62);
+        }
+    }
+    .item4 {
+        &::before {
+            content: "4";
+            font-size: 122px;
+            position: absolute;
+            top: -158px;
+            font-size: 122.885px;
+            z-index: 50;
+        }
+        &::after {
+            content: "";
+            position: absolute;
+            top: -236px;
+            left: -20px;
+            border-radius: 50%;
+            width: 269px;
+            height: 269px;
+            background: rgba(97, 15, 17, 0.38);
+        }
+    }
+}
+
+// ========================================================== / section_intro ===============
+// ---------------------------------------------------------- section_reviews ---------------
+.section_reviews {
+    padding: 84px 0 100px;
+    .section_title {
+        color: #000;
+        text-align: start;
+        margin-bottom: 50px;
+    }
+    .reviews_item {
+        background: #FFFFFF;
+        border: 3px solid #000000;
+        box-sizing: border-box;
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+        padding: 30px 40px;
+        height: 330px;
+        &__description {
+            @include Ubuntu_font();
+            font-size: 20px;
+            line-height: 30px;
+            margin-bottom: 34px;
+        }
+        .reviews_item_title {
+            @include Ubuntu_font();
+            font-size: 25px;
+            line-height: 38px;
+        }
+        .reviews_item_subtitle {
+            @include Ubuntu_font();
+            font-size: 18px;
+            line-height: 27px;
+        }
+    }
+}
+
+// ========================================================== / section_reviews =============
+// ---------------------------------------------------------- section_faq -------------------
+.section_faq {}
+
+// ========================================================== / section_faq =================
+// ---------------------------------------------------------- section_footer ----------------
+.section_footer {}
+
+// ========================================================== / section_footer ==============
