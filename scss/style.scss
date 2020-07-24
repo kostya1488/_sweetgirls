@@ -1,19 +1,23 @@
 // ---------------------------------------------------------- mixins ------------------------
-// @mixin Ubuntu_font {
-//     font-family: 'Ubuntu', sans-serif;
-// }
-@mixin Playfair_font {
-    font-family: 'Playfair Display', serif;
-}
-
 // ========================================================== / mixins ======================
 // ---------------------------------------------------------- variables =====================
-// font
-// color
+$screen_xs_max: 575px;
+$screen_sm_max: 767px;
+$screen_md_max: 991px;
+$screen_lg_max: 1999px;
+$screen_sm: 576px;
+$screen_md: 768px;
+$screen_lg: 992px;
+$screen_xl: 1200px;
 // ========================================================== / variables ===================
 // ---------------------------------------------------------- commons -----------------------
 .body {
     font-family: 'Ubuntu', sans-serif;
+    a,
+    a:hover {
+        text-decoration: none;
+        color: #fff;
+    }
 }
 
 .main_btn {
@@ -25,7 +29,6 @@
     min-width: 221px;
     line-height: 26px;
     color: #fff;
-    text-decoration: none;
     margin-top: 46px;
     top: -7px;
     transition: .3s;
@@ -48,7 +51,7 @@
 }
 
 .section_title {
-    @include Playfair_font();
+    font-family: 'Playfair Display', serif;
     font-style: normal;
     font-weight: bold;
     font-size: 45px;
@@ -58,11 +61,16 @@
 }
 
 .section_description {
-    // @include Ubuntu_font();
     font-size: 20px;
     line-height: 30px;
     text-align: center;
     color: #FFFFFF;
+}
+
+@media (max-width: $screen_md_max) {
+    .section_title {
+        font-size: 36px;
+    }
 }
 
 // ========================================================== / commons =====================
@@ -79,7 +87,6 @@
             list-style: none;
         }
         .item_link {
-            text-decoration: none;
             color: #fff;
             font-weight: 500;
             font-size: 18px;
@@ -89,14 +96,12 @@
     .intro_content {
         margin-top: 25vh;
         .intro_title {
-            @include Playfair_font();
             font-weight: bold;
             font-size: 45px;
             line-height: 64px;
             color: #E52D27;
         }
         .intro_subtitle {
-            // @include Ubuntu_font();
             font-size: 20px;
             line-height: 28px;
             color: rgba(255, 255, 255, 0.9);
@@ -110,7 +115,6 @@
             background-size: cover;
         }
         .scroll_arrow_img {
-            // @include Ubuntu_font();
             position: relative;
             top: -100px;
             left: 70px;
@@ -121,13 +125,19 @@
             transform: rotate(90deg);
         }
     }
+    @media (max-width: $screen_lg_max) {
+        background-position: 73% 100%;
+        .intro_content {
+            margin-top: 51vh;
+        }
+    }
 }
 
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_preview ---------------
 .section_preview {
     background: rgba(179, 18, 23, 0.8);
-    padding-top: 81px;
+    padding-top: 71px;
     padding-bottom: 81px;
     .section_title {
         margin-bottom: 20px;
@@ -140,7 +150,6 @@
     background: #121212;
     padding-bottom: 100px;
     padding-top: 85px;
-    padding-bottom: 100px;
     .section_title {
         margin-bottom: 79px;
     }
@@ -162,6 +171,16 @@
         &__description {
             font-size: 18px;
             line-height: 30px;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        padding-bottom: 20px;
+        padding-top: 50px;
+        .section_title {
+            margin-bottom: 50px;
+        }
+        .advantages_item {
+            margin-bottom: 50px;
         }
     }
 }
@@ -188,7 +207,6 @@
         list-style: none;
         padding: 0;
         margin: 0;
-        height: 70px;
         li {
             margin-bottom: 5px;
         }
@@ -196,19 +214,40 @@
     .contacts_block {
         margin-top: 10px;
     }
+    @media (min-width: $screen_lg) {
+        .phone_list {
+            height: 70px;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        .section_title {
+            text-align: center;
+        }
+        .contacts_block {
+            margin-top: 33px;
+        }
+        .contacts_icon {
+            width: 30px;
+            margin-bottom: 10px;
+        }
+        .phone_list li {
+            margin-bottom: 10px;
+        }
+    }
 }
 
 // ========================================================== / section_contacts ============
 // ---------------------------------------------------------- section_promo -----------------
 .section_promo {
-    padding: 100px 0;
     .promo_photo_wrap {
         text-align: center;
         position: relative;
+        // width: 440px;
+        height: 629px;
+        overflow: hidden;
         img {
-            position: relative;
-            left: 20px;
-            z-index: 50;
+            height: 100%;
+            // z-index: 50px;
         }
         &::before {
             content: "";
@@ -220,7 +259,7 @@
             height: 153px;
             background: #750C0F;
             border-radius: 50%;
-            z-index: 49;
+            // z-index: 49;
         }
     }
     .promo_text_wrap {
@@ -236,7 +275,6 @@
         }
         .promo_text_title {
             color: #B31217;
-            //        @include Ubuntu_font();
             font-weight: 500;
             font-size: 20px;
             line-height: 30px;
@@ -249,10 +287,35 @@
             }
             span {
                 color: #1D1D1D;
-                //        @include Ubuntu_font();
                 font-size: 20px;
                 line-height: 30px;
             }
+        }
+    }
+    @media (min-width: $screen_lg) {
+        padding: 100px 0;
+        .promo_photo_wrap img {
+            position: relative;
+        }
+        .promo_photo_wrap {
+            width: 440px;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        .promo_photo_wrap {
+            padding: 0;
+            height: 100%;
+            &::before {
+                top: 10%;
+                left: 10%;
+            }
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+        .promo_text_wrap {
+            padding: 50px 30px;
         }
     }
 }
@@ -260,128 +323,159 @@
 // ========================================================== / section_promo ===============
 // ---------------------------------------------------------- section_requirements ----------
 .section_requirements {
-    padding: 80px 0;
     background: url(../assets/requirements.jpg) no-repeat 0 0;
     background-size: cover;
-    height: 100vh;
     position: relative;
     overflow: hidden;
-    &::after {
-        content: "";
-        position: absolute;
-        top: 15vh;
-        right: -54px;
-        border-radius: 50%;
-        width: 154px;
-        height: 154px;
-        background: rgba(117, 12, 15, 0.35);
+    &>div {
+        padding: 80px 0;
     }
-    &::before {
-        content: "";
-        position: absolute;
-        top: 3vh;
-        left: 42vh;
-        border-radius: 50%;
-        width: 300px;
-        height: 300px;
-        background: rgba(33, 33, 33, 0.62);
-    }
-    .section_title {
-        @include Playfair_font();
-        font-size: 45px;
-        line-height: 56px;
-        text-align: start;
-        position: relative;
-        z-index: 50;
-    }
-    .requirements_item__description {
-        position: relative;
-        font-size: 20px;
-        line-height: 30px;
-        color: rgba(255, 255, 255, 0.9);
-        z-index: 50;
-    }
-    .requirements_item {
-        //        @include Ubuntu_font();
-        font-weight: bold;
-        color: #FFFFFF;
-        position: relative;
-    }
-    .item1 {
-        &::before {
-            content: "1";
+    @media (min-width: $screen_xl) {
+        .section_title {
             font-size: 45px;
-            position: absolute;
-            top: -70px;
+            line-height: 56px;
+            text-align: start;
+            position: relative;
             z-index: 50;
         }
         &::after {
             content: "";
             position: absolute;
-            top: -90px;
-            left: -42px;
-            border-radius: 50%;
-            width: 110px;
-            height: 110px;
-            background: rgba(33, 33, 33, 0.62);
-        }
-    }
-    .item2 {
-        &::before {
-            content: "2";
-            font-size: 83px;
-            position: absolute;
-            top: -112px;
-            z-index: 50;
-        }
-        &::after {
-            content: "";
-            position: absolute;
-            top: -74px;
-            left: -40px;
+            top: 15vh;
+            right: -54px;
             border-radius: 50%;
             width: 154px;
             height: 154px;
-            background: rgba(97, 15, 17, 0.38);
+            background: rgba(117, 12, 15, 0.35);
+            z-index: 2;
         }
-    }
-    .item3 {
         &::before {
-            content: "3";
-            font-size: 63px;
-            position: absolute;
-            top: -91px;
-            z-index: 50;
-        }
-        &::after {
             content: "";
             position: absolute;
-            top: -90px;
-            left: -38px;
+            top: 3vh;
+            left: 42vh;
             border-radius: 50%;
-            width: 222px;
-            height: 222px;
+            width: 300px;
+            height: 300px;
             background: rgba(33, 33, 33, 0.62);
+            z-index: 2;
         }
-    }
-    .item4 {
-        &::before {
-            content: "4";
-            font-size: 122px;
-            position: absolute;
-            top: -158px;
-            font-size: 122.885px;
+        .requirements_item__description {
+            position: relative;
+            font-size: 20px;
+            line-height: 30px;
+            color: rgba(255, 255, 255, 0.9);
             z-index: 50;
         }
-        &::after {
-            content: "";
-            position: absolute;
-            top: -236px;
-            left: -20px;
-            border-radius: 50%;
-            width: 269px;
-            height: 269px;
-            background: rgba(97, 15, 17, 0.38);
+        .requirements_item {
+            color: #FFFFFF;
+            position: relative;
+            &::after {
+                z-index: 3;
+            }
+            &::before {
+                font-weight: bold;
+                z-index: 50;
+            }
+        }
+        .item1 {
+            &::before {
+                content: "1";
+                font-size: 45px;
+                position: absolute;
+                top: -70px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -90px;
+                left: -42px;
+                border-radius: 50%;
+                width: 110px;
+                height: 110px;
+                background: rgba(33, 33, 33, 0.62);
+            }
+        }
+        .item2 {
+            &::before {
+                content: "2";
+                font-size: 83px;
+                position: absolute;
+                top: -112px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -74px;
+                left: -40px;
+                border-radius: 50%;
+                width: 154px;
+                height: 154px;
+                background: rgba(97, 15, 17, 0.38);
+            }
+        }
+        .item3 {
+            &::before {
+                content: "3";
+                font-size: 63px;
+                position: absolute;
+                top: -91px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -90px;
+                left: -38px;
+                border-radius: 50%;
+                width: 222px;
+                height: 222px;
+                background: rgba(33, 33, 33, 0.62);
+            }
+        }
+        .item4 {
+            &::before {
+                content: "4";
+                font-size: 122px;
+                position: absolute;
+                top: -158px;
+                font-size: 122.885px;
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                top: -236px;
+                left: -20px;
+                border-radius: 50%;
+                width: 269px;
+                height: 269px;
+                background: rgba(97, 15, 17, 0.38);
+            }
+        }
+    }
+    @media (max-width: $screen_lg_max) {
+        background-position: 70% 0;
+        .section_title {
+            font-size: 36px;
+            line-height: 46px;
+            margin-bottom: 50px;
+        }
+        .requirements_item {
+            min-height: 250px;
+            background: #FFFFFF;
+            border: 3px solid #000000;
+            box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+            padding: 40px;
+            margin-bottom: 40px;
+            font-size: 18px;
+            line-height: 24px;
+            text-align: center;
+        }
+        .carousel-control-prev,
+        .carousel-control-next {
+            position: static;
+            display: inline;
+            width: 42px;
+            opacity: 1;
         }
     }
 }
@@ -389,7 +483,8 @@
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_reviews ---------------
 .section_reviews {
-    padding: 84px 0 100px;
+    padding: 84px 0;
+    overflow: hidden;
     .section_title {
         color: #000;
         text-align: start;
@@ -403,30 +498,147 @@
         padding: 30px 40px;
         height: 330px;
         &__description {
-            //        @include Ubuntu_font();
             font-size: 20px;
             line-height: 30px;
             margin-bottom: 34px;
         }
         .reviews_item_title {
-            //        @include Ubuntu_font();
             font-size: 25px;
             line-height: 38px;
         }
         .reviews_item_subtitle {
-            //        @include Ubuntu_font();
             font-size: 18px;
             line-height: 27px;
+        }
+        position: relative;
+        .red_circle1,
+        .red_circle2 {
+            position: absolute;
+            border-radius: 50%;
+            background: rgba(179, 18, 23, 0.24);
+            z-index: -1;
+        }
+        .red_circle1 {
+            width: 286px;
+            height: 286px;
+            right: -241px;
+            bottom: -126px;
+        }
+        .red_circle2 {
+            width: 525px;
+            height: 525px;
+            right: -260px;
+            bottom: 32px;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        padding: 50px 0 30px;
+        .reviews_item {
+            margin-bottom: 30px;
+            .red_circle1 {
+                right: -24px;
+                bottom: 147px;
+            }
+            .red_circle2 {
+                right: 195px;
+                bottom: -108px;
+            }
         }
     }
 }
 
 // ========================================================== / section_reviews =============
 // ---------------------------------------------------------- section_faq -------------------
-.section_faq {}
+.section_faq {
+    padding: 92px 0 100px;
+    background: linear-gradient(90deg, #152331 0%, #000000 100%);
+    .section_title {
+        margin-bottom: 72px;
+    }
+    .card {
+        border-radius: 0;
+        font-size: 20px;
+        line-height: 30px;
+        .btn {
+            padding: 10px 20px;
+            font-size: inherit;
+            line-height: inherit;
+            text-align: start;
+            color: #B31217;
+            i {
+                transition: .3s;
+                line-height: 30px;
+                float: right;
+            }
+        }
+        .collapsed {
+            color: #000;
+            i {
+                transform: rotateX(-180deg);
+            }
+        }
+        .card-body {
+            padding-right: 100px;
+        }
+    }
+    .card+.card {
+        margin-top: 34px;
+    }
+    .faq_image_wrap {
+        position: relative;
+        min-height: 450px;
+        img {
+            position: relative;
+            z-index: 1;
+        }
+        .figure_circle {
+            position: absolute;
+            border-radius: 50%;
+        }
+        .figure1 {
+            width: 245px;
+            height: 245px;
+            left: 50%;
+            top: 17%;
+            margin-left: -122.5px;
+            background: #750C0F;
+        }
+        .figure2 {
+            width: 182px;
+            height: 182px;
+            left: 42%;
+            top: 37%;
+            background: #FFFFFF;
+        }
+    }
+    @media (max-width: $screen_md_max) {
+        padding-top: 60px;
+        padding-bottom: 0;
+    }
+}
 
 // ========================================================== / section_faq =================
 // ---------------------------------------------------------- section_footer ----------------
-.section_footer {}
+.section_footer {
+    background: linear-gradient(90deg, #181A1D 0%, #000000 100%);
+    padding: 60px 0 70px;
+    .section_title {
+        color: #B31217;
+        font-size: 25px;
+        line-height: 36px;
+        margin-bottom: 35px;
+    }
+    .menu {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 26px;
+        a {
+            color: #fff;
+            font-weight: 500;
+        }
+    }
+}
 
 // ========================================================== / section_footer ==============
