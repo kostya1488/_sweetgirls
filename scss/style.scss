@@ -1,8 +1,7 @@
 // ---------------------------------------------------------- mixins ------------------------
-@mixin Ubuntu_font {
-    font-family: 'Ubuntu', sans-serif;
-}
-
+// @mixin Ubuntu_font {
+//     font-family: 'Ubuntu', sans-serif;
+// }
 @mixin Playfair_font {
     font-family: 'Playfair Display', serif;
 }
@@ -13,8 +12,8 @@
 // color
 // ========================================================== / variables ===================
 // ---------------------------------------------------------- commons -----------------------
-.container {
-    width: 1200px;
+.body {
+    font-family: 'Ubuntu', sans-serif;
 }
 
 .main_btn {
@@ -22,7 +21,6 @@
     position: relative;
     padding: 11px 60px 11px 24px;
     background: #E52D27 url(../assets/svg/carbon_arrow-right.svg) no-repeat 92% 50%;
-    @include Ubuntu_font();
     font-size: 18px;
     min-width: 221px;
     line-height: 26px;
@@ -30,6 +28,7 @@
     text-decoration: none;
     margin-top: 46px;
     top: -7px;
+    transition: .3s;
     &::after {
         content: "";
         width: 100%;
@@ -38,10 +37,13 @@
         top: 7px;
         left: 10px;
         border: 3px solid #E52D27;
+        transition: .3s;
     }
     &:hover {
-        text-decoration: none;
-        color: #fff;
+        background-position: 85% 50%;
+        &::after {
+            transform: translate(-20px, -14px);
+        }
     }
 }
 
@@ -56,7 +58,7 @@
 }
 
 .section_description {
-    @include Ubuntu_font();
+    // @include Ubuntu_font();
     font-size: 20px;
     line-height: 30px;
     text-align: center;
@@ -94,7 +96,7 @@
             color: #E52D27;
         }
         .intro_subtitle {
-            @include Ubuntu_font();
+            // @include Ubuntu_font();
             font-size: 20px;
             line-height: 28px;
             color: rgba(255, 255, 255, 0.9);
@@ -108,7 +110,7 @@
             background-size: cover;
         }
         .scroll_arrow_img {
-            @include Ubuntu_font();
+            // @include Ubuntu_font();
             position: relative;
             top: -100px;
             left: 70px;
@@ -143,7 +145,7 @@
         margin-bottom: 79px;
     }
     .advantages_item {
-        @include Ubuntu_font();
+        //        @include Ubuntu_font();
         color: #FFFFFF;
         &__icon {
             height: 54px;
@@ -176,7 +178,7 @@
         color: #EED0AC;
     }
     .contacts_text {
-        @include Ubuntu_font();
+        //        @include Ubuntu_font();
         font-size: 18px;
         line-height: 27px;
         color: #EED0AC;
@@ -234,7 +236,7 @@
         }
         .promo_text_title {
             color: #B31217;
-            @include Ubuntu_font();
+            //        @include Ubuntu_font();
             font-weight: 500;
             font-size: 20px;
             line-height: 30px;
@@ -247,7 +249,7 @@
             }
             span {
                 color: #1D1D1D;
-                @include Ubuntu_font();
+                //        @include Ubuntu_font();
                 font-size: 20px;
                 line-height: 30px;
             }
@@ -300,7 +302,7 @@
         z-index: 50;
     }
     .requirements_item {
-        @include Ubuntu_font();
+        //        @include Ubuntu_font();
         font-weight: bold;
         color: #FFFFFF;
         position: relative;
@@ -401,18 +403,18 @@
         padding: 30px 40px;
         height: 330px;
         &__description {
-            @include Ubuntu_font();
+            //        @include Ubuntu_font();
             font-size: 20px;
             line-height: 30px;
             margin-bottom: 34px;
         }
         .reviews_item_title {
-            @include Ubuntu_font();
+            //        @include Ubuntu_font();
             font-size: 25px;
             line-height: 38px;
         }
         .reviews_item_subtitle {
-            @include Ubuntu_font();
+            //        @include Ubuntu_font();
             font-size: 18px;
             line-height: 27px;
         }

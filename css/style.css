@@ -1,19 +1,19 @@
-.container {
-  width: 1200px; }
+.body {
+  font-family: 'Ubuntu', sans-serif; }
 
 .main_btn {
   display: inline-block;
   position: relative;
   padding: 11px 60px 11px 24px;
   background: #E52D27 url(../assets/svg/carbon_arrow-right.svg) no-repeat 92% 50%;
-  font-family: 'Ubuntu', sans-serif;
   font-size: 18px;
   min-width: 221px;
   line-height: 26px;
   color: #fff;
   text-decoration: none;
   margin-top: 46px;
-  top: -7px; }
+  top: -7px;
+  transition: .3s; }
   .main_btn::after {
     content: "";
     width: 100%;
@@ -21,10 +21,12 @@
     position: absolute;
     top: 7px;
     left: 10px;
-    border: 3px solid #E52D27; }
+    border: 3px solid #E52D27;
+    transition: .3s; }
   .main_btn:hover {
-    text-decoration: none;
-    color: #fff; }
+    background-position: 85% 50%; }
+    .main_btn:hover::after {
+      transform: translate(-20px, -14px); }
 
 .section_title {
   font-family: 'Playfair Display', serif;
@@ -36,7 +38,6 @@
   color: #FFFFFF; }
 
 .section_description {
-  font-family: 'Ubuntu', sans-serif;
   font-size: 20px;
   line-height: 30px;
   text-align: center;
@@ -67,7 +68,6 @@
       line-height: 64px;
       color: #E52D27; }
     .section_intro .intro_content .intro_subtitle {
-      font-family: 'Ubuntu', sans-serif;
       font-size: 20px;
       line-height: 28px;
       color: rgba(255, 255, 255, 0.9);
@@ -79,7 +79,6 @@
       background: url(../assets/banner_front_photo.jpg) no-repeat 0 0;
       background-size: cover; }
     .section_intro .intro_content .scroll_arrow_img {
-      font-family: 'Ubuntu', sans-serif;
       position: relative;
       top: -100px;
       left: 70px;
@@ -104,7 +103,6 @@
   .section_advantages .section_title {
     margin-bottom: 79px; }
   .section_advantages .advantages_item {
-    font-family: 'Ubuntu', sans-serif;
     color: #FFFFFF; }
     .section_advantages .advantages_item__icon {
       height: 54px;
@@ -129,7 +127,6 @@
     line-height: 45px;
     color: #EED0AC; }
   .section_contacts .contacts_text {
-    font-family: 'Ubuntu', sans-serif;
     font-size: 18px;
     line-height: 27px;
     color: #EED0AC;
@@ -174,7 +171,6 @@
     margin-bottom: 54px; }
   .section_promo .promo_text_wrap .promo_text_title {
     color: #B31217;
-    font-family: 'Ubuntu', sans-serif;
     font-weight: 500;
     font-size: 20px;
     line-height: 30px; }
@@ -185,7 +181,6 @@
       margin-bottom: 5px; }
     .section_promo .promo_text_wrap .promo_text_list span {
       color: #1D1D1D;
-      font-family: 'Ubuntu', sans-serif;
       font-size: 20px;
       line-height: 30px; }
 
@@ -228,7 +223,6 @@
     color: rgba(255, 255, 255, 0.9);
     z-index: 50; }
   .section_requirements .requirements_item {
-    font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
     color: #FFFFFF;
     position: relative; }
@@ -308,15 +302,12 @@
     padding: 30px 40px;
     height: 330px; }
     .section_reviews .reviews_item__description {
-      font-family: 'Ubuntu', sans-serif;
       font-size: 20px;
       line-height: 30px;
       margin-bottom: 34px; }
     .section_reviews .reviews_item .reviews_item_title {
-      font-family: 'Ubuntu', sans-serif;
       font-size: 25px;
       line-height: 38px; }
     .section_reviews .reviews_item .reviews_item_subtitle {
-      font-family: 'Ubuntu', sans-serif;
       font-size: 18px;
       line-height: 27px; }
