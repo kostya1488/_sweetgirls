@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>sweet girls</title>
+    <link rel="shortcut icon" href="favicon.ico" />
+
 
     <link rel="stylesheet" href="css/style.css">
 
@@ -18,32 +20,44 @@
 
 <body class="body">
     <!-- ---------------------------------------------------------- section_intro ----------------- -->
-    <section id="intro" class="section_intro">
-        <div class="container">
-            <header>
-                <div class="row justify-content-between">
-                    <div class="logo col-1 d-none d-md-block"><img src="assets/svg/logo.svg" alt="" class="img-fluid"></div>
-                    <ul class="menu d-flex justify-content-between col-xl-5 col-lg-7 col-md-8">
-                        <li class="menu_item"><a href="#" class="item_link">Главная</a></li>
-                        <li class="menu_item"><a href="#" class="item_link">Услуги</a></li>
-                        <li class="menu_item"><a href="#" class="item_link">Об агентстве</a></li>
-                        <li class="menu_item"><a href="#" class="item_link">Контакты</a></li>
-                    </ul>
-                </div>
-            </header>
-            <div class="row intro_content">
-                <div class=" col-xl-7">
-                    <div class="intro_title">Лучшее эскорт-агентство "Sweet-Girls"</div>
-                    <div class="intro_subtitle">Комфортные условия - наша забота!</div>
-                    <div class="intro_button">
-                        <a class="main_btn" href="#">Подробнее
-                        </a>
+    <section id="intro" class="section_intro d-flex flex-column">
+        <div class="banner_wrap">
+            <div class="container">
+                <header>
+                    <div class="row justify-content-between">
+                        <div class="logo col-2 col-lg-1 d-none d-md-block"><img src="assets/svg/logo.svg" alt="" class="img-fluid"></div>
+                        <div class="menu col-xl-5 col-lg-7 col-md-8">
+                            <input class="d-sm-none" type="checkbox" name="" id="burger_menu">
+                            <label class="d-sm-none toggle_button" for="burger_menu">
+                            <span></span>                            
+                        </label>
+                            <div class="logo_title d-sm-none col-5">PRINCESS GIRL</div>
+                            <ul class="menu_box">
+                                <div class="logo_title  d-sm-none">PRINCESS GIRL</div>
+                                <li class="menu_box_item"><a href="#" class="item_link">Главная</a></li>
+                                <li class="menu_box_item"><a href="#" class="item_link">Услуги</a></li>
+                                <li class="menu_box_item"><a href="#" class="item_link">Об агентстве</a></li>
+                                <li class="menu_box_item"><a href="#" class="item_link">Контакты</a></li>
+                            </ul>
+                        </div>
                     </div>
-                </div>
-
-                <div class="col-xl-5 d-flex  justify-content-md-end justify-content-lg-between align-items-end ">
-                    <div class="banner_front_photo d-none d-lg-block"></div>
-                    <div class="scroll_arrow_img">scroll <img src="assets/svg/Arrow 1.svg" alt=""></div>
+                </header>
+            </div>
+        </div>
+        <div class="intro_content">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-7">
+                        <div class="intro_title">Лучшее эскорт-агентство "Sweet-Girls"</div>
+                        <div class="intro_subtitle">Комфортные условия - наша забота!</div>
+                        <div class="intro_button d-flex justify-content-center d-sm-block">
+                            <a class="main_btn" href="#">Подробнее</a>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 d-flex  justify-content-md-end justify-content-xl-between align-items-end ">
+                        <div class="banner_front_photo"></div>
+                        <div class="scroll_arrow_img d-none d-sm-block">scroll <img src="assets/svg/Arrow 1.svg" alt=""></div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -95,7 +109,7 @@
         <div class="container">
             <div class="row d-flex justify-content-between">
                 <div class="section_title col-xl-3">Наши контакты</div>
-                <div class="col-xl-5 d-flex flex-column align-items-center flex-lg-row align-items-lg-start contacts_block">
+                <div class="col-xl-5 d-flex flex-column align-items-center flex-xl-row align-items-xl-start contacts_block">
                     <div> <img src="assets/svg/carbon_phone.svg" alt="" class="contacts_icon">
                     </div>
                     <ul class="phone_list d-flex flex-column flex-wrap">
@@ -105,7 +119,7 @@
                         <li><a href="tel:+" class="phone_item contacts_text">+38(067)405-73-03</a></li>
                     </ul>
                 </div>
-                <div class="col-xl-3 d-flex d-lg-block flex-column align-items-center contacts_block">
+                <div class="col-xl-3 d-flex d-xl-block flex-column align-items-center contacts_block">
                     <img src="assets/svg/carbon_email.svg" alt="" class="contacts_icon">
                     <a href="mailto:" class="contacts_text">princess-girls@ukr.net</a>
                 </div>
@@ -116,7 +130,7 @@
     <!-- ========================================================== / section_contacts ============ -->
     <!-- ---------------------------------------------------------- section_promo ----------------- -->
     <section id="promo" class="section_promo">
-        <div class="container-lg">
+        <div class="container-xl">
             <div class="row">
                 <div class="col-xl-6 promo_photo_wrap center">
                     <img src="assets/promo.jpg" alt="" class="">
@@ -126,12 +140,12 @@
                     <div class="section_description">Если Вас интересует хорошо оплачиваемая работа для девушек, Киев не обязательно должен быть Вашим родным городом, Вы быстро освоитесь. </div>
                     <div class="promo_text_title">МЫ ПРЕДЛАГАЕМ</div>
                     <ul class="promo_text_list">
-                        <li><span>Дружный коллектив</span></li>
-                        <li><span>Услуги косметологов, визажистов и стилистов</span></li>
-                        <li><span>Зарплата от 80 000 грн. в месяц, выплачивается ежедневно, без задержек и вычетов</span></li>
-                        <li><span>Возможность оплатить учебу в ВУЗе</span></li>
+                        <li><span class="list_item_text">Дружный коллектив</span></li>
+                        <li><span class="list_item_text">Услуги косметологов, визажистов и стилистов</span></li>
+                        <li><span class="list_item_text">Зарплата от 80 000 грн. в месяц, выплачивается ежедневно, без задержек и вычетов</span></li>
+                        <li><span class="list_item_text">Возможность оплатить учебу в ВУЗе</span></li>
                     </ul>
-                    <div class="promo_text_button">
+                    <div class="promo_text_button d-flex justify-content-center d-sm-block ">
                         <a href="#" class="main_btn">Заполнить анкету</a>
                     </div>
                 </div>
@@ -145,7 +159,7 @@
         <div class="container d-flex flex-column justify-content-end justify-content-lg-between min-vh-100">
             <div class="row justify-content-center justify-content-lg-start">
                 <div class="col-xl-1"></div>
-                <div class="section_title col-7">Требования девушкам, имеющим желание работать в эскорт</div>
+                <div class="section_title col-10 col-md-7">Требования девушкам, имеющим желание работать в эскорт</div>
 
             </div>
             <div class="row d-none d-lg-flex h-100">
@@ -170,33 +184,33 @@
                     </div>
                 </div>
             </div>
-            <div id="carouselExampleControls" class="carousel slide d-lg-none" data-ride="carousel">
+            <div id="carouselExampleControls" class="carousel slide d-lg-none" data-ride="carousel" data-interval="500000">
                 <div class="row justify-content-center">
-                    <div class="col-md-9">
+                    <div class="col-10 col-md-9">
                         <div class="carousel-inner">
-                            <div class="carousel-item active" data-interval="10000">
-                                <div class="col-3 requirements_item item1">
+                            <div class="carousel-item active">
+                                <div class="requirements_item item1">
                                     <div class="requirements_item__description">
                                         Лучшее твое качество - это твоя привлекательность.
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item" data-interval="10000">
-                                <div class="col-3 requirements_item item2">
+                                <div class="requirements_item item2">
                                     <div class="requirements_item__description">
                                         Тебе достаточно быть просто милой и обаятельной девушкой, обладающей большой жизненной энергией и хорошим, позитивным настроением.
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item" data-interval="10000">
-                                <div class="col-3 requirements_item item3">
+                                <div class="requirements_item item3">
                                     <div class="requirements_item__description">
                                         Твой возраст должен быть oт 21 года до 35 лет.
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item" data-interval="10000">
-                                <div class="col-3 requirements_item item4">
+                                <div class="requirements_item item4">
                                     <div class="requirements_item__description">
                                         Знание английского языка не обязательно, однако является огромным преимуществом на пути к успешной и красивой жизни.
                                     </div>
@@ -206,7 +220,7 @@
                     </div>
                 </div>
                 <div class="row d-flex justify-content-center">
-                    <div class="col-md-2 d-flex justify-content-between">
+                    <div class="col-4 col-md-2 d-flex justify-content-between">
                         <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
                             <img src="assets/svg/left-arrow-circle.svg" alt="">
                         </a>
@@ -277,8 +291,8 @@
 
                     <div class="accordion" id="accordionExample">
                         <div class="card">
-                            <div class="btn" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit ?
+                            <div class="btn d-flex justify-content-between" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                <div class="card_title"> Lorem ipsum dolor sit amet, consectetur adipiscing elit ?</div>
                                 <i class="fas fa-arrow-up"></i>
                             </div>
 
@@ -289,8 +303,8 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="btn collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                Lorem ipsum dolor sit amet ?
+                            <div class="btn d-flex justify-content-between collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                <div class="card_title"> Lorem ipsum dolor sit amet ?</div>
                                 <i class="fas fa-arrow-up"></i>
                             </div>
                             <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
@@ -300,8 +314,8 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="btn collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                Lorem ipsum dolor sit amet ?
+                            <div class="btn d-flex justify-content-between collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="card_title"> Lorem ipsum dolor sit amet ?</div>
                                 <i class="fas fa-arrow-up"></i>
                             </div>
                             <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
@@ -311,8 +325,8 @@
                             </div>
                         </div>
                         <div class="card">
-                            <div class="btn collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
-                                Lorem ipsum dolor sit amet ?
+                            <div class="btn d-flex justify-content-between collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseThree">
+                                <div class="card_title"> Lorem ipsum dolor sit amet ?</div>
                                 <i class="fas fa-arrow-up"></i>
                             </div>
                             <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
@@ -324,7 +338,7 @@
                     </div>
 
                 </div>
-                <div class="col-xl-5">
+                <div class="d-none d-sm-block col-xl-5">
                     <div class="faq_image_wrap d-flex justify-content-center">
                         <img src="assets/flower.png" alt="" class="align-self-center">
 
@@ -343,15 +357,16 @@
             <div class="section_title text-uppercase">sweet girls</div>
             <div class="row d-flex justify-content-center">
                 <div class="col-xl-6">
-                    <ul class="menu d-flex justify-content-around">
-                        <li class="menu_item"><a href="#" class="item_link">Главная</a></li>
-                        <li class="menu_item"><a href="#" class="item_link">Услуги</a></li>
-                        <li class="menu_item"><a href="#" class="item_link">Об агентстве</a></li>
-                        <li class="menu_item"><a href="#" class="item_link">Контакты</a></li>
+                    <ul class="menu row d-flex justify-content-sm-center">
+                        <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Главная</a></li>
+                        <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Услуги</a></li>
+                        <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Об агентстве</a></li>
+                        <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Контакты</a></li>
                     </ul>
                 </div>
             </div>
         </div>
+        <div class="bottom_text text-center ">Lorem ipsum dolor 2020</div>
 
     </section>
     <!-- ========================================================== / section_footer ============== -->
