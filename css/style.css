@@ -16,7 +16,7 @@ section {
   background: #E52D27 url(../assets/svg/carbon_arrow-right.svg) no-repeat 92% 50%;
   font-size: 18px;
   width: 100%;
-  max-width: 300px;
+  max-width: 240px;
   line-height: 26px;
   color: #fff;
   margin-top: 46px;
@@ -100,6 +100,8 @@ section {
       position: absolute;
       top: 40vh;
       width: 100%; }
+      .section_intro .intro_content .section_title {
+        text-align: start; }
       .section_intro .intro_content .intro_title {
         font-weight: bold;
         font-size: 45px;
@@ -417,7 +419,10 @@ section {
   position: relative;
   overflow: hidden; }
   .section_requirements > div {
-    padding: 100px 0 116px; }
+    padding: 30px 0; }
+  @media (min-width: 1400px) {
+    .section_requirements > div {
+      padding: 100px 0 116px; } }
   @media (min-width: 992px) and (max-width: 1199px) {
     .section_requirements {
       background-position: 74% 0; } }
@@ -614,6 +619,47 @@ section {
         font-size: 16px;
         line-height: 24px;
         margin-bottom: 20px; } }
+
+.section_anketa {
+  background: url(../assets/anketa.jpg) no-repeat 0 0;
+  background-size: cover; }
+  .section_anketa .section_title {
+    z-index: 5; }
+  .section_anketa .form_box {
+    background: #313131;
+    padding: 40px 0;
+    margin-bottom: 16px; }
+    .section_anketa .form_box__title {
+      font-weight: 500;
+      font-size: 25px;
+      line-height: 30px;
+      color: #FFFFFF;
+      margin-bottom: 14px;
+      padding: 0 30px; }
+  .section_anketa .input_title {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+    color: #FFFFFF;
+    padding: 5px 8px; }
+  .section_anketa .form_item {
+    padding: 0 30px; }
+  .section_anketa input {
+    background: #313131;
+    border: 2px solid rgba(255, 255, 255, 0.28);
+    padding: 12px 8px;
+    margin-bottom: 14px;
+    font-family: 'Ubuntu', sans-serif;
+    color: #fff;
+    outline: none; }
+  .section_anketa .main_btn,
+  .section_anketa .main_btn:hover {
+    color: #fff;
+    max-width: 240px; }
+  @media (max-width: 575px) {
+    .section_anketa .form_box__title,
+    .section_anketa .form_item {
+      padding: 0 20px; } }
 
 .section_faq {
   background: linear-gradient(90deg, #152331 0%, #000000 100%); }

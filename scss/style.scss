@@ -35,7 +35,7 @@ section {
     font-size: 18px;
     // min-width: 221px;
     width: 100%;
-    max-width: 300px;
+    max-width: 240px;
     line-height: 26px;
     color: #fff;
     margin-top: 46px;
@@ -151,6 +151,9 @@ section {
             position: absolute;
             top: 40vh;
             width: 100%;
+            .section_title {
+                text-align: start;
+            }
             .intro_title {
                 font-weight: bold;
                 font-size: 45px;
@@ -575,7 +578,12 @@ section {
     position: relative;
     overflow: hidden;
     &>div {
-        padding: 100px 0 116px;
+        padding: 30px 0;
+    }
+    @media (min-width: 1400px) {
+        &>div {
+            padding: 100px 0 116px;
+        }
     }
     @media (min-width: $screen_lg) and (max-width: $screen_lg_max) {
         background-position: 74% 0;
@@ -831,6 +839,59 @@ section {
 }
 
 // ========================================================== / section_reviews =============
+// ---------------------------------------------------------- section_anketa ---------------- 
+.section_anketa {
+    background: url(../assets/anketa.jpg) no-repeat 0 0;
+    background-size: cover;
+    .section_title {
+        z-index: 5;
+    }
+    .form_box {
+        background: #313131;
+        padding: 40px 0;
+        margin-bottom: 16px;
+        &__title {
+            font-weight: 500;
+            font-size: 25px;
+            line-height: 30px;
+            color: #FFFFFF;
+            margin-bottom: 14px;
+            padding: 0 30px;
+        }
+    }
+    .input_title {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 19px;
+        color: #FFFFFF;
+        padding: 5px 8px;
+    }
+    .form_item {
+        padding: 0 30px;
+    }
+    input {
+        background: #313131;
+        border: 2px solid rgba(255, 255, 255, 0.28);
+        padding: 12px 8px;
+        margin-bottom: 14px;
+        font-family: 'Ubuntu', sans-serif;
+        color: #fff;
+        outline: none;
+    }
+    .main_btn,
+    .main_btn:hover {
+        color: #fff;
+        max-width: 240px;
+    }
+    @media (max-width: $screen_xs_max) {
+        .form_box__title,
+        .form_item {
+            padding: 0 20px;
+        }
+    }
+}
+
+// ========================================================== / section_anketa ============== 
 // ---------------------------------------------------------- section_faq -------------------
 .section_faq {
     // padding: 92px 0 100px;
