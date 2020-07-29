@@ -35,7 +35,7 @@ section {
     font-size: 18px;
     // min-width: 221px;
     width: 100%;
-    max-width: 240px;
+    max-width: 250px;
     line-height: 26px;
     color: #fff;
     margin-top: 46px;
@@ -850,6 +850,7 @@ section {
         background: #313131;
         padding: 40px 0;
         margin-bottom: 16px;
+        height: 501px;
         &__title {
             font-weight: 500;
             font-size: 25px;
@@ -869,7 +870,11 @@ section {
     .form_item {
         padding: 0 30px;
     }
-    input {
+    // button {
+    //     border: none;
+    //     outline: none;
+    // }
+    .input {
         background: #313131;
         border: 2px solid rgba(255, 255, 255, 0.28);
         padding: 12px 8px;
@@ -881,7 +886,14 @@ section {
     .main_btn,
     .main_btn:hover {
         color: #fff;
-        max-width: 240px;
+        outline: none;
+        border: none;
+    }
+    #result_form {
+        display: none;
+        color: #fff;
+        font-size: 25px;
+        margin-top: 21%;
     }
     @media (max-width: $screen_xs_max) {
         .form_box__title,
@@ -1001,7 +1013,7 @@ section {
         }
     }
     .bottom_text {
-        margin-top: 30px;
+        margin-top: 42px;
         font-size: 12px;
         line-height: 17px;
         color: #fff;

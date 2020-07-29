@@ -16,7 +16,7 @@ section {
   background: #E52D27 url(../assets/svg/carbon_arrow-right.svg) no-repeat 92% 50%;
   font-size: 18px;
   width: 100%;
-  max-width: 240px;
+  max-width: 250px;
   line-height: 26px;
   color: #fff;
   margin-top: 46px;
@@ -628,7 +628,8 @@ section {
   .section_anketa .form_box {
     background: #313131;
     padding: 40px 0;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    height: 501px; }
     .section_anketa .form_box__title {
       font-weight: 500;
       font-size: 25px;
@@ -644,7 +645,7 @@ section {
     padding: 5px 8px; }
   .section_anketa .form_item {
     padding: 0 30px; }
-  .section_anketa input {
+  .section_anketa .input {
     background: #313131;
     border: 2px solid rgba(255, 255, 255, 0.28);
     padding: 12px 8px;
@@ -655,7 +656,13 @@ section {
   .section_anketa .main_btn,
   .section_anketa .main_btn:hover {
     color: #fff;
-    max-width: 240px; }
+    outline: none;
+    border: none; }
+  .section_anketa #result_form {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+    margin-top: 21%; }
   @media (max-width: 575px) {
     .section_anketa .form_box__title,
     .section_anketa .form_item {
@@ -734,7 +741,7 @@ section {
     .section_footer .menu .menu_item {
       padding: 0 25px; }
   .section_footer .bottom_text {
-    margin-top: 30px;
+    margin-top: 42px;
     font-size: 12px;
     line-height: 17px;
     color: #fff; }

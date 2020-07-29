@@ -16,6 +16,8 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
 </head>
 
 <body class="body">
@@ -32,12 +34,12 @@
                             <span></span>                            
                         </label>
                             <div class="logo_title d-sm-none col-5">PRINCESS GIRL</div>
-                            <ul class="menu_box">
+                            <ul id="menu_box" class="menu_box">
                                 <div class="logo_title  d-sm-none">PRINCESS GIRL</div>
-                                <li class="menu_box_item"><a href="#" class="item_link">Главная</a></li>
-                                <li class="menu_box_item"><a href="#" class="item_link">Услуги</a></li>
-                                <li class="menu_box_item"><a href="#" class="item_link">Об агентстве</a></li>
-                                <li class="menu_box_item"><a href="#" class="item_link">Контакты</a></li>
+                                <li class="menu_box_item"><a href="/" class="item_link">Главная</a></li>
+                                <li class="menu_box_item"><a href="#reviews" class="item_link">Отзывы</a></li>
+                                <li class="menu_box_item"><a href="#promo" class="item_link">Об агентстве</a></li>
+                                <li class="menu_box_item"><a href="#contacts" class="item_link">Контакты</a></li>
                             </ul>
                         </div>
                     </div>
@@ -54,7 +56,7 @@
                             <a class="main_btn" href="#">Подробнее</a>
                         </div>
                     </div>
-                    <div class="col-xl-5 d-flex  justify-content-md-end justify-content-xl-between align-items-end ">
+                    <div class="col-xl-6 d-flex  justify-content-md-end justify-content-xl-between align-items-end ">
                         <div class="banner_front_photo"></div>
                         <div class="scroll_arrow_img d-none d-sm-block">scroll <img src="assets/svg/Arrow 1.svg" alt=""></div>
                     </div>
@@ -291,23 +293,24 @@
             <div class="row justify-content-center">
                 <div class="form_box col-11 col-lg-8 col-xl-7">
                     <div class="form_box__title col-12">Заполняй анкету</div>
-                    <form action="">
+                    <form method="post" id="ajax_form" action="">
                         <div class="form_item col-12">
                             <div class="input_title">Имя</div>
-                            <input class="w-100" type="text">
+                            <input class="input w-100" type="text" name="name">
                         </div>
                         <div class="form_item col-12">
                             <div class="input_title">Номер телефона</div>
-                            <input class="w-100" type="tel">
+                            <input class="input w-100" type="tel" name="phone">
                         </div>
                         <div class="form_item col-12">
                             <div class="input_title">Email</div>
-                            <input class="w-100" type="email">
+                            <input class="input w-100" type="email" name="email">
                         </div>
                         <div class="col-12 d-flex justify-content-center">
-                            <a class="main_btn">Отправить анкету</a>
+                            <button class="main_btn" id="btn" type="button" onclick="sendAjaxForm('result_form', 'ajax_form', 'php/action_ajax_form.php')">Отправить анкету</button>
                         </div>
                     </form>
+                    <div id="result_form" class="text-center"></div>
                 </div>
             </div>
         </div>
@@ -391,8 +394,8 @@
             <div class="section_title text-uppercase">sweet girls</div>
             <div class="row d-flex justify-content-center">
                 <div class="col-xl-6">
-                    <ul class="menu row d-flex justify-content-sm-center">
-                        <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Главная</a></li>
+                    <ul id="menu" class="menu row d-flex justify-content-sm-center">
+                        <li class="menu_item col-6 col-sm-auto"><a href="#anketa" class="item_link">Главная</a></li>
                         <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Услуги</a></li>
                         <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Об агентстве</a></li>
                         <li class="menu_item col-6 col-sm-auto"><a href="#" class="item_link">Контакты</a></li>
@@ -401,13 +404,14 @@
             </div>
         </div>
         <div class="bottom_text text-center ">Lorem ipsum dolor 2020</div>
-
     </section>
     <!-- ========================================================== / section_footer ============== -->
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.js" integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+    <script src="js/script.js"></script>
 </body>
 
 </html>
