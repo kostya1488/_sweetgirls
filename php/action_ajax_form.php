@@ -1,7 +1,7 @@
 <?php
   $token = "1265883939:AAHZ7hPCC68TDLKpzBaPD0x1G-6IVRGl9is"; 
   $chat_id = "-423211419";
-  
+
   $to = "matvienkoigor956@gmail.com";
   $subject = "Заявка с сайта";
   $headers = "From: SweetGirls@example.com";
@@ -21,7 +21,7 @@
     $txt_for_mail .= $key . $value . "\r\n";
   };
 
-  echo json_encode("Спасибо, <br> заявка успешно отправлена!");
+  echo json_encode($result);
 
   $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$txt_for_tg}","r");
 
