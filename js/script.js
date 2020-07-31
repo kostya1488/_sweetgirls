@@ -27,6 +27,7 @@ $(window).scroll(function() {
 function sendAjaxForm(result_form, ajax_form, url) {
     var result_form = $('#' + result_form);
     var ajax_form = $('#' + ajax_form);
+    var form_title = $('#form_title');
 
     ajax_form.submit(function() {
         $.ajax({
@@ -38,6 +39,7 @@ function sendAjaxForm(result_form, ajax_form, url) {
                 result = $.parseJSON(response);
 
                 ajax_form.parent().hide();
+                form_title.hide();
                 $('#anketa').addClass('styles_after_send');
                 result_form.show().animate({
                     opacity: 1

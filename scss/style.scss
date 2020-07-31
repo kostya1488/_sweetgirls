@@ -11,6 +11,7 @@ $screen_lg: 992px;
 $screen_xl: 1200px;
 $brand_main_color_light: #E52D27;
 $brand_main_color_dark: #B31217;
+$brand_second_color_light: #fff;
 // ========================================================== / variables ===================
 // ---------------------------------------------------------- commons -----------------------
 section {
@@ -24,7 +25,7 @@ section {
     a,
     a:hover {
         text-decoration: none;
-        color: #fff;
+        color: $brand_second_color_light;
     }
 }
 
@@ -38,7 +39,7 @@ section {
     width: 100%;
     max-width: 250px;
     line-height: 26px;
-    color: #fff;
+    color: $brand_second_color_light;
     margin-top: 46px;
     top: -7px;
     transition: .3s;
@@ -57,7 +58,7 @@ section {
     font-size: 45px;
     line-height: 54px;
     text-align: center;
-    color: #FFFFFF;
+    color: $brand_second_color_light;
     margin-bottom: 30px;
 }
 
@@ -65,7 +66,7 @@ section {
     font-size: 20px;
     line-height: 30px;
     text-align: center;
-    color: #FFFFFF;
+    color: $brand_second_color_light;
 }
 
 #toTop {
@@ -129,7 +130,7 @@ section {
     .banner_front_photo {
         width: 222px;
         height: 197px;
-        border: 6px solid #FFFFFF;
+        border: 6px solid $brand_second_color_light;
         background: url(../assets/banner_front_photo.jpg) no-repeat 0 0;
         background-size: cover;
     }
@@ -155,7 +156,7 @@ section {
                 justify-content: space-between;
             }
             .item_link {
-                color: #fff;
+                color: $brand_second_color_light;
                 font-weight: 500;
                 font-size: 18px;
                 line-height: 26px;
@@ -187,7 +188,7 @@ section {
                 font-weight: 300;
                 font-size: 20px;
                 line-height: 20px;
-                color: #FFFFFF;
+                color: $brand_second_color_light;
                 transform: rotate(90deg);
             }
         }
@@ -218,7 +219,7 @@ section {
             flex-direction: column;
             justify-content: center;
             align-items: center;
-            background: #fff;
+            background: $brand_second_color_light;
             list-style: none;
             margin: 0;
             padding: 0;
@@ -280,7 +281,7 @@ section {
                 display: block;
                 position: absolute;
                 width: 100%;
-                background-color: #fff;
+                background-color: $brand_second_color_light;
                 height: 3px;
                 transition-duration: .3s;
             }
@@ -361,7 +362,7 @@ section {
     //     margin-bottom: 30px;
     // }
     .advantages_item {
-        color: #FFFFFF;
+        color: $brand_second_color_light;
         margin-bottom: 14px;
         &__icon {
             height: 54px;
@@ -644,7 +645,7 @@ section {
             z-index: 50;
         }
         .requirements_item {
-            color: #FFFFFF;
+            color: $brand_second_color_light;
             position: relative;
             &::after {
                 z-index: 3;
@@ -736,7 +737,7 @@ section {
         }
         .requirements_item {
             min-height: 250px;
-            background: #FFFFFF;
+            background: $brand_second_color_light;
             border: 3px solid #000000;
             box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
             padding: 40px;
@@ -774,14 +775,13 @@ section {
 // ========================================================== / section_intro ===============
 // ---------------------------------------------------------- section_reviews ---------------
 .section_reviews {
-    // padding: 84px 0;
     overflow: hidden;
     .section_title {
         color: #000;
         text-align: start;
     }
     .reviews_item {
-        background: #FFFFFF;
+        background: $brand_second_color_light;
         border: 3px solid #000000;
         box-sizing: border-box;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -873,7 +873,7 @@ section {
         background-image: url(../assets/form_background_after_send.jpg);
         background-repeat: no-repeat;
         background-position: -350px 200px;
-        border: 5px solid #FFFFFF;
+        border: 5px solid $brand_second_color_light;
         padding: 40px 0;
         height: 501px;
         transition: .3s;
@@ -881,7 +881,7 @@ section {
             font-weight: 500;
             font-size: 25px;
             line-height: 30px;
-            color: #FFFFFF;
+            color: $brand_second_color_light;
             margin-bottom: 14px;
             padding: 0 30px;
         }
@@ -891,7 +891,7 @@ section {
         font-weight: 500;
         font-size: 16px;
         line-height: 19px;
-        color: #FFFFFF;
+        color: $brand_second_color_light;
         padding: 5px 8px;
     }
     .form_item {
@@ -903,22 +903,22 @@ section {
         padding: 12px 8px;
         margin-bottom: 14px;
         font-family: 'Ubuntu', sans-serif;
-        color: #fff;
+        color: $brand_second_color_light;
         outline: none;
     }
     .main_btn,
     .main_btn:hover {
-        color: #fff;
+        color: $brand_second_color_light;
         outline: none;
         border: none;
     }
     #result_form {
         display: none;
         opacity: 0;
-        color: #fff;
+        color: $brand_second_color_light;
         font-size: 25px;
         text-align: end;
-        padding: 20px 60px;
+        padding: 0px 40px;
         .section_title {
             text-align: inherit;
             margin-bottom: 0;
@@ -1054,7 +1054,7 @@ section {
             height: 182px;
             left: 42%;
             top: 37%;
-            background: #FFFFFF;
+            background: $brand_second_color_light;
         }
     }
     @media (max-width: $screen_lg_max) {
@@ -1094,7 +1094,7 @@ section {
         font-size: 18px;
         line-height: 26px;
         a {
-            color: #fff;
+            color: $brand_second_color_light;
             font-weight: 500;
         }
         .menu_item {
@@ -1105,7 +1105,7 @@ section {
         margin-top: 42px;
         font-size: 12px;
         line-height: 17px;
-        color: #fff;
+        color: $brand_second_color_light;
     }
     @media (max-width: $screen_xs_max) {
         .menu_item {

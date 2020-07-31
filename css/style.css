@@ -35,14 +35,14 @@ section {
   font-size: 45px;
   line-height: 54px;
   text-align: center;
-  color: #FFFFFF;
+  color: #fff;
   margin-bottom: 30px; }
 
 .section_description {
   font-size: 20px;
   line-height: 30px;
   text-align: center;
-  color: #FFFFFF; }
+  color: #fff; }
 
 #toTop {
   position: fixed;
@@ -84,7 +84,7 @@ section {
   .section_intro .banner_front_photo {
     width: 222px;
     height: 197px;
-    border: 6px solid #FFFFFF;
+    border: 6px solid #fff;
     background: url(../assets/banner_front_photo.jpg) no-repeat 0 0;
     background-size: cover; }
   @media (min-width: 576px) and (max-width: 1199px) {
@@ -130,7 +130,7 @@ section {
         font-weight: 300;
         font-size: 20px;
         line-height: 20px;
-        color: #FFFFFF;
+        color: #fff;
         transform: rotate(90deg); } }
   @media (max-width: 575px) {
     .section_intro .banner_wrap {
@@ -259,7 +259,7 @@ section {
 .section_advantages {
   background: #121212; }
   .section_advantages .advantages_item {
-    color: #FFFFFF;
+    color: #fff;
     margin-bottom: 14px; }
     .section_advantages .advantages_item__icon {
       height: 54px;
@@ -472,7 +472,7 @@ section {
       color: rgba(255, 255, 255, 0.9);
       z-index: 50; }
     .section_requirements .requirements_item {
-      color: #FFFFFF;
+      color: #fff;
       position: relative; }
       .section_requirements .requirements_item::after {
         z-index: 3; }
@@ -544,7 +544,7 @@ section {
         line-height: 46px; }
       .section_requirements .requirements_item {
         min-height: 250px;
-        background: #FFFFFF;
+        background: #fff;
         border: 3px solid #000000;
         box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
         padding: 40px;
@@ -577,7 +577,7 @@ section {
     color: #000;
     text-align: start; }
   .section_reviews .reviews_item {
-    background: #FFFFFF;
+    background: #fff;
     border: 3px solid #000000;
     box-sizing: border-box;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
@@ -649,7 +649,7 @@ section {
     background-image: url(../assets/form_background_after_send.jpg);
     background-repeat: no-repeat;
     background-position: -350px 200px;
-    border: 5px solid #FFFFFF;
+    border: 5px solid #fff;
     padding: 40px 0;
     height: 501px;
     transition: .3s;
@@ -658,14 +658,14 @@ section {
       font-weight: 500;
       font-size: 25px;
       line-height: 30px;
-      color: #FFFFFF;
+      color: #fff;
       margin-bottom: 14px;
       padding: 0 30px; }
   .section_anketa .input_title {
     font-weight: 500;
     font-size: 16px;
     line-height: 19px;
-    color: #FFFFFF;
+    color: #fff;
     padding: 5px 8px; }
   .section_anketa .form_item {
     padding: 0 30px; }
@@ -688,7 +688,7 @@ section {
     color: #fff;
     font-size: 25px;
     text-align: end;
-    padding: 20px 60px; }
+    padding: 0px 40px; }
     .section_anketa #result_form .section_title {
       text-align: inherit;
       margin-bottom: 0; }
@@ -785,7 +785,7 @@ section {
       height: 182px;
       left: 42%;
       top: 37%;
-      background: #FFFFFF; }
+      background: #fff; }
   @media (max-width: 575px) {
     .section_faq .card_title,
     .section_faq .card-body {
