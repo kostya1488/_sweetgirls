@@ -1,8 +1,8 @@
 <?php
-  $token = "1265883939:AAHZ7hPCC68TDLKpzBaPD0x1G-6IVRGl9is"; 
-  $chat_id = "-423211419";
+  $token = "1280328336:AAHng1jZ5X3mOIDHolaJ0xN_DFNt6fMFhfE"; 
+  $chat_id = "-1001163041178";
 
-  $to = "matvienkoigor956@gmail.com";
+  $to = "matvienkoigor956@gmail.com, agency@sweetgirls.com.ua";
   $subject = "Заявка с сайта";
   $headers = "From: SweetGirls@example.com";
 

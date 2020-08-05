@@ -2,7 +2,6 @@
 $(function() {
     $('.item_link').on('click', function(e) {
         if (!($("#burger_menu").attr("checked"))) {
-            // console.log('hello');
             $("#burger_menu").prop("checked", false);
         }
         $('html,body').stop().animate({

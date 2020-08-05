@@ -582,7 +582,7 @@ section {
     box-sizing: border-box;
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
     padding: 30px 40px;
-    height: 330px;
+    min-height: 370px;
     margin-bottom: 16px;
     position: relative; }
     .section_reviews .reviews_item__description {
@@ -595,6 +595,13 @@ section {
     .section_reviews .reviews_item .reviews_item_subtitle {
       font-size: 18px;
       line-height: 27px; }
+    .section_reviews .reviews_item .reviews_item_icon {
+      width: 72px;
+      height: 72px; }
+      .section_reviews .reviews_item .reviews_item_icon img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover; }
     .section_reviews .reviews_item .red_circle1,
     .section_reviews .reviews_item .red_circle2 {
       position: absolute;
