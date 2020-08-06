@@ -502,6 +502,7 @@ section {
         .section_description {
             color: #1D1D1D;
             margin-bottom: 54px;
+            text-align: start;
         }
         .promo_text_title {
             color: $brand_main_color_dark;
@@ -756,7 +757,7 @@ section {
     }
     @media (max-width: $screen_xs_max) {
         &>div {
-            padding-bottom: 64px;
+            padding-bottom: 100px;
         }
         .section_title {
             font-size: 20px;
@@ -851,8 +852,8 @@ section {
             text-align: center;
         }
         .reviews_item {
-            padding: 20px;
-            margin-bottom: 10px;
+            padding: 30px 20px;
+            margin-bottom: 20px;
             &__description {
                 font-size: 16px;
                 line-height: 24px;
@@ -937,7 +938,7 @@ section {
         }
     }
     @media (max-width: $screen_xs_max) {
-        padding: 50px 0 0;
+        padding: 100px 0 60px;
         .form_box__title,
         .form_item {
             padding: 0 20px;
