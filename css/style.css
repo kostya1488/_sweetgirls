@@ -77,10 +77,6 @@ section {
   height: 100vh;
   padding-bottom: 0;
   padding-top: 0; }
-  .section_intro .banner_wrap {
-    height: 100%;
-    background: url(../assets/banner.jpg) no-repeat 0 100%;
-    background-size: cover; }
   .section_intro .banner_front_photo {
     width: 222px;
     height: 197px;
@@ -94,6 +90,10 @@ section {
     .section_intro .banner_front_photo {
       display: none; } }
   @media (min-width: 576px) {
+    .section_intro .banner_wrap {
+      height: 100%;
+      background: url(../assets/banner.jpg) no-repeat 0 100%;
+      background-size: cover; }
     .section_intro header {
       padding-top: 32px; }
       .section_intro header .menu_box {
@@ -134,7 +134,9 @@ section {
         transform: rotate(90deg); } }
   @media (max-width: 575px) {
     .section_intro .banner_wrap {
-      background-position: 62% 100%; }
+      height: 100%;
+      background: url(../assets/banner_mob.jpg) no-repeat 50% 100%;
+      background-size: cover; }
     .section_intro .menu {
       margin-top: 50px;
       padding-left: 25px; }
@@ -320,7 +322,7 @@ section {
     margin-top: 10px; }
   @media (min-width: 1200px) {
     .section_contacts .phone_list {
-      height: 70px; } }
+      height: 100px; } }
   @media (max-width: 1199px) {
     .section_contacts {
       padding-top: 100px;
@@ -427,8 +429,6 @@ section {
 
 .section_requirements {
   padding: 0;
-  background: url(../assets/requirements.jpg) no-repeat 0 0;
-  background-size: cover;
   position: relative;
   overflow: hidden; }
   .section_requirements > div {
@@ -537,6 +537,10 @@ section {
       width: 269px;
       height: 269px;
       background: rgba(97, 15, 17, 0.38); } }
+  @media (min-width: 576px) {
+    .section_requirements {
+      background: url(../assets/requirements.jpg) no-repeat 0 0;
+      background-size: cover; } }
   @media (max-width: 991px) {
     .section_requirements {
       background-position: 70% 0; }
@@ -560,17 +564,20 @@ section {
         width: 42px;
         opacity: 1; } }
   @media (max-width: 575px) {
-    .section_requirements > div {
-      padding-bottom: 100px; }
-    .section_requirements .section_title {
-      font-size: 20px;
-      line-height: 24px; }
-    .section_requirements .requirements_item {
-      min-height: 215px;
-      padding: 20px;
-      margin-bottom: 20px;
-      font-size: 16px;
-      line-height: 24px; } }
+    .section_requirements {
+      background: url(../assets/requirements_mob.jpg) no-repeat 9% 0;
+      background-size: cover; }
+      .section_requirements > div {
+        padding-bottom: 100px; }
+      .section_requirements .section_title {
+        font-size: 20px;
+        line-height: 24px; }
+      .section_requirements .requirements_item {
+        min-height: 215px;
+        padding: 20px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        line-height: 24px; } }
 
 .section_reviews {
   overflow: hidden; }
@@ -641,8 +648,6 @@ section {
         margin-bottom: 20px; } }
 
 .section_anketa {
-  background: url(../assets/anketa.jpg) no-repeat 0 0;
-  background-size: cover;
   padding: 200px 0;
   position: relative; }
   .section_anketa .background_darken {
@@ -702,8 +707,14 @@ section {
       margin-bottom: 0; }
     .section_anketa #result_form .result_subtitle {
       font-weight: 300; }
+  @media (min-width: 576px) {
+    .section_anketa {
+      background: url(../assets/anketa.jpg) no-repeat 0 0;
+      background-size: cover; } }
   @media (max-width: 575px) {
     .section_anketa {
+      background: url(../assets/anketa_mob.jpg) no-repeat 0 0;
+      background-size: cover;
       padding: 100px 0 60px; }
       .section_anketa .form_box__title,
       .section_anketa .form_item {
