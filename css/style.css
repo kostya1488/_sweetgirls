@@ -224,7 +224,7 @@ section {
         left: 10%; }
     .section_intro .intro_content {
       position: relative;
-      margin-bottom: 50px;
+      margin-bottom: 80px;
       margin-top: 30px; }
     .section_intro .banner_front_photo {
       position: absolute;
@@ -713,7 +713,7 @@ section {
       background-size: cover; } }
   @media (max-width: 575px) {
     .section_anketa {
-      background: url(../assets/anketa_mob.jpg) no-repeat 0 0;
+      background: url(../assets/anketa_mob.jpgintro_content) no-repeat 0 0;
       background-size: cover;
       padding: 100px 0 60px; }
       .section_anketa .form_box__title,

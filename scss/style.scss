@@ -302,7 +302,7 @@ section {
         }
         .intro_content {
             position: relative;
-            margin-bottom: 50px;
+            margin-bottom: 80px;
             margin-top: 30px;
         }
         .banner_front_photo {
@@ -946,7 +946,7 @@ section {
         background-size: cover;
     }
     @media (max-width: $screen_xs_max) {
-        background: url(../assets/anketa_mob.jpg) no-repeat 0 0;
+        background: url(../assets/anketa_mob.jpgintro_content ) no-repeat 0 0;
         background-size: cover;
         padding: 100px 0 60px;
         .form_box__title,
